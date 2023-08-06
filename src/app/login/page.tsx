@@ -5,6 +5,7 @@ import axios from "axios";
 import {useRouter} from "next/navigation";
 import Link from "next/link";
 import {signIn} from "next-auth/react";
+import {Prisma} from "@prisma/client";
 
 const initialState: InitialStateProps = {
   email: "",
@@ -13,7 +14,7 @@ const initialState: InitialStateProps = {
 
 interface InitialStateProps {
   email: string;
-  password: string;
+  password: string | any;
 }
 
 const LoginPage = () => {
@@ -67,7 +68,7 @@ const LoginPage = () => {
           type="submit"
           className="bg-purple-500 text-1xl font-bold p-2 rounded text-white"
         >
-          Register
+          Login
         </button>
       </div>
       <div className="">
