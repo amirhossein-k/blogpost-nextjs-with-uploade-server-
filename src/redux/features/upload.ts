@@ -28,7 +28,7 @@ export const singleUpload = createAsyncThunk(
       },
     };
     const res = await axios.post(
-      "http://localhost:4000/api/uploade/singleFile",
+      "https://uploade.iran.liara.run/api/uploade/singleFile",
       formData,
       config
     );

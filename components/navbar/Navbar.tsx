@@ -13,9 +13,11 @@ const Navbar = ({currentUser}: UserMenuProps) => {
   return (
     <header>
       <nav className="bg-gray-200 flex justify-between px-4 py-6 shadow-xl">
-        <div className="">{currentUser?.name}</div>
+        <div className="" style={{padding: 10}}>
+          {currentUser?.name}
+        </div>
 
-        <div className="flex gap4">
+        <div className="flex flex-row " style={{gap: "20px", padding: 10}}>
           <Link href="/home">Home</Link>
           <Link href="/create">Create</Link>
 

@@ -32,8 +32,8 @@ model Blog{
   id        String @id @default(auto()) @map("_id") @db.ObjectId
   name      String
   createdAt  DateTime @default(now())
-  imageSrc   String
-  description  String
+  imageSrc     String
+  description String
   user   User @relation(fields: [userId],references: [id], onDelete: Cascade)
   userId  String @db.ObjectId
 
